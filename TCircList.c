@@ -85,7 +85,7 @@ void TCircList_print(TCircList *a)
 int luck_soldier(TCircList *a,int jumps)
 {
     NODE *aux=a->first;
-    NODE *tmp;
+    NODE *tmp=NULL;
 
     int i;
     while (nodes(a)!= 1)
@@ -112,13 +112,13 @@ NODE *find_node(NODE *a,int jumps)
 int nodes(TCircList *a)
 {
     NODE *i=a->first;
-    int num;
+    int num=1;
     while (i->prox!=a->first)
         {
               i=i->prox;
               num++;
         }
-        return ++num;
+        return num;
 
 }
 void TCircList_destroy(TCircList*a)

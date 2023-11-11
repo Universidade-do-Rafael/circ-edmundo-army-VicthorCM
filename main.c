@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+int main()
 {
     int m,n,i;
     TCircList *clist = TCircList_create();
@@ -13,5 +13,6 @@ int main(int argc, char const *argv[])
         TCircList_insert(clist,i);
     }
     printf("%d",luck_soldier(clist,m));
+    TCircList_destroy(clist);
     return 0;
 }
